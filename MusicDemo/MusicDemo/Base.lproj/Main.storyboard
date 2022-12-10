@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MusicDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5yt-ar-jPX">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gPK-Kz-1zJ">
+                                        <rect key="frame" x="0.0" y="16" width="375" height="635"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <collectionViewLayout key="collectionViewLayout" id="gMw-Cc-mP0" customClass="CustomCollectionViewLayout" customModule="MusicDemo" customModuleProvider="target"/>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCell" id="SUI-le-1tw" customClass="collectionViewCell" customModule="MusicDemo" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="QAz-VJ-ReK">
+                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7vo-kj-hxc">
+                                                            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="create_your_birds_icn" translatesAutoresizingMaskIntoConstraints="NO" id="bay-kJ-pX1">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                                                </imageView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="bay-kJ-pX1" secondAttribute="trailing" id="2Gt-dy-Zfm"/>
+                                                                <constraint firstItem="bay-kJ-pX1" firstAttribute="top" secondItem="7vo-kj-hxc" secondAttribute="top" id="4fH-Ji-KHV"/>
+                                                                <constraint firstAttribute="bottom" secondItem="bay-kJ-pX1" secondAttribute="bottom" id="4pi-Rf-FGN"/>
+                                                                <constraint firstItem="bay-kJ-pX1" firstAttribute="leading" secondItem="7vo-kj-hxc" secondAttribute="leading" id="hAU-oC-l6D"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="7vo-kj-hxc" secondAttribute="bottom" id="8QH-TP-rWI"/>
+                                                        <constraint firstAttribute="trailing" secondItem="7vo-kj-hxc" secondAttribute="trailing" id="OBi-wP-XMI"/>
+                                                        <constraint firstItem="7vo-kj-hxc" firstAttribute="leading" secondItem="QAz-VJ-ReK" secondAttribute="leading" id="dGh-Cu-8Rq"/>
+                                                        <constraint firstItem="7vo-kj-hxc" firstAttribute="top" secondItem="QAz-VJ-ReK" secondAttribute="top" id="gba-BD-iaV"/>
+                                                    </constraints>
+                                                </collectionViewCellContentView>
+                                                <size key="customSize" width="120" height="120"/>
+                                                <connections>
+                                                    <outlet property="img" destination="bay-kJ-pX1" id="1Ii-RT-U1w"/>
+                                                </connections>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="gPK-Kz-1zJ" secondAttribute="trailing" id="7AW-by-x2Z"/>
+                                    <constraint firstAttribute="bottom" secondItem="gPK-Kz-1zJ" secondAttribute="bottom" constant="16" id="JmR-dT-sac"/>
+                                    <constraint firstItem="gPK-Kz-1zJ" firstAttribute="leading" secondItem="5yt-ar-jPX" secondAttribute="leading" id="ObV-KZ-9rL"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gPK-Kz-1zJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="8Nf-7h-uSQ"/>
+                            <constraint firstAttribute="trailing" secondItem="5yt-ar-jPX" secondAttribute="trailing" id="BvG-5g-ua8"/>
+                            <constraint firstAttribute="bottom" secondItem="5yt-ar-jPX" secondAttribute="bottom" id="Q8i-Ma-pDf"/>
+                            <constraint firstItem="5yt-ar-jPX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jSY-Au-E9A"/>
+                            <constraint firstItem="5yt-ar-jPX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="zvx-Nx-MTw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="gPK-Kz-1zJ" id="a4b-jQ-FOE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="68.973214285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="create_your_birds_icn" width="100" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
